@@ -4,7 +4,10 @@
   "version": "0.0.1",
   "description": "The Material Components for the web (StencilJS)",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bootstrap": "npm exec lerna bootstrap",
+    "build": "npm exec lerna run build",
+    "test": "npm exec lerna run test",
+    "lint": "npm exec lerna run lint"
   },
   "repository": {
     "type": "git",
@@ -46,5 +49,8 @@
     "packages/mdc-top-app-bar",
     "packages/mdc-touch-target",
     "packages/mdc-typography"
-  ]
+  ],
+  "devDependencies": {
+    "lerna": "^6.0.1"
+  }
 }
