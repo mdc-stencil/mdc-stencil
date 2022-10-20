@@ -7,7 +7,9 @@
     "bootstrap": "npm exec lerna bootstrap",
     "build": "npm exec lerna run build",
     "test": "npm exec lerna run test",
-    "lint": "npm exec lerna run lint"
+    "lint": "npm exec lerna run lint",
+    "version": "npm exec lerna version --no-private",
+    "publish": "npm exec lerna publish --no-private"
   },
   "repository": {
     "type": "git",
