@@ -1,0 +1,52 @@
+{
+  "name": "@mdc-stencil/data-table",
+  "version": "0.0.0",
+  "description": "The Material Components for the web (StencilJS) data table component",
+  "keywords": [
+    "material",
+    "stencil"
+  ],
+  "homepage": "https://github.com/mdc-stencil/mdc-stencil/packages/mdc-data-table#readme",
+  "bugs": {
+    "url": "https://github.com/mdc-stencil/mdc-stencil/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdc-stencil/mdc-stencil.git",
+    "directory": "packages/mdc-data-table"
+  },
+  "license": "MIT",
+  "author": "Mikael Karon <mikael@karon.se>",
+  "main": "dist/components/index.js",
+  "module": "dist/components/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "clean": "./scripts/clean.mjs",
+    "generate": "stencil generate",
+    "lint": "eslint --ext .ts --ext .tsx src",
+    "start": "npm run watch -- --serve --no-open",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "watch": "npm run build -- --watch --dev"
+  },
+  "dependencies": {
+    "@material/data-table": "^14.0.0",
+    "@mdc-stencil/checkbox": "^0.0.0",
+    "@mdc-stencil/common": "^0.0.0",
+    "@mdc-stencil/icon-button": "^0.0.0",
+    "@mdc-stencil/linear-progress": "^0.0.0",
+    "@mdc-stencil/select": "^0.0.0",
+    "@stencil/core": "^2.18.1"
+  },
+  "devDependencies": {
+    "@stencil/sass": "^2.0.0",
+    "desm": "^1.3.0",
+    "eslint": "^8.25.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "shelljs": "^0.8.5"
+  }
+}

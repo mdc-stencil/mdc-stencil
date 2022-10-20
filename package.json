@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "name": "@mdc-stencil/mdc-stencil",
+  "version": "0.0.1",
+  "description": "The Material Components for the web (StencilJS)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdc-stencil/mdc-stencil.git"
+  },
+  "keywords": [
+    "material",
+    "stencil"
+  ],
+  "author": "Mikael Karon <mikael@karon.se>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdc-stencil/mdc-stencil/issues"
+  },
+  "homepage": "https://github.com/mdc-stencil/mdc-stencil#readme",
+  "workspaces": [
+    "packages/common",
+    "packages/mdc-bottom-app-bar",
+    "packages/mdc-button",
+    "packages/mdc-icon-button",
+    "packages/mdc-card",
+    "packages/mdc-checkbox",
+    "packages/mdc-linear-progress",
+    "packages/mdc-menu-surface",
+    "packages/mdc-menu",
+    "packages/mdc-select",
+    "packages/mdc-data-table",
+    "packages/mdc-dialog",
+    "packages/mdc-drawer",
+    "packages/mdc-floating-label",
+    "packages/mdc-form-field",
+    "packages/mdc-layout-grid",
+    "packages/mdc-line-ripple",
+    "packages/mdc-list",
+    "packages/mdc-notched-outline",
+    "packages/mdc-radio",
+    "packages/mdc-textfield",
+    "packages/mdc-theme",
+    "packages/mdc-top-app-bar",
+    "packages/mdc-touch-target",
+    "packages/mdc-typography"
+  ]
+}

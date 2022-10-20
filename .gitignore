@@ -1,0 +1,6 @@
+dist/
+
+.stencil/
+.idea/
+.vscode/
+node_modules/
