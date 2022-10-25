@@ -20,7 +20,6 @@ export const config: Config = {
         name: 'overwrite-rollup-options',
         options: (options: RollupInputOptions) => ({
           ...options,
-          treeshake: false,
           external: Object.keys(pkg.dependencies)
         })
       }
@@ -30,9 +29,9 @@ export const config: Config = {
     {
       type: 'dist-custom-elements',
       generateTypeDeclarations: true,
-      includeGlobalScripts: false,
+      dir: 'dist',
       copy: [
-        { src: '**/_*.scss', dest : 'dist/styles' }
+        { src: '**/*.scss', dest : 'dist' }
       ]
     },
     {

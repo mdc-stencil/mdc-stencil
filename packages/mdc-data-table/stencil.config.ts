@@ -29,8 +29,9 @@ export const config: Config = {
     {
       type: 'dist-custom-elements',
       generateTypeDeclarations: true,
+      dir: 'dist',
       copy: [
-        { src: '**/*.scss', dest : 'dist/styles' }
+        { src: '**/*.scss', dest : 'dist' }
       ]
     },
     {
