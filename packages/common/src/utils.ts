@@ -16,6 +16,6 @@ export function hasComponentOnReady (el: HTMLElement): el is HTMLStencilElement 
   return typeof (el as HTMLStencilElement).componentOnReady === 'function'
 }
 
-export const onReady = async <T extends HTMLElement>(el: T): Promise<T> => hasComponentOnReady(el)
+export const componentOnReady = async <T extends HTMLElement>(el: T): Promise<T> => hasComponentOnReady(el)
   ? await el.componentOnReady()
   : await Promise.resolve(el)
