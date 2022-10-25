@@ -1,11 +1,11 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcCheckboxFCProps extends MdcCheckboxNativeControlFCProps {
+export interface CheckboxProps extends CheckboxNativeControlProps {
   touch?: boolean
 }
 
-export const MdcCheckboxFC: FunctionalComponent<MdcCheckboxFCProps> = (
+export const Checkbox: FunctionalComponent<CheckboxProps> = (
   props,
   children
 ) => {
@@ -20,25 +20,25 @@ export const MdcCheckboxFC: FunctionalComponent<MdcCheckboxFCProps> = (
         ...classNames(className)
       }}
     >
-      <MdcCheckboxNativeControlFC {...rest} />
-      <MdcCheckboxBackgroundFC>
-        <MdcCheckboxCheckmarkFC />
-        <MdcCheckboxMixedmarkFC />
-      </MdcCheckboxBackgroundFC>
-      <MdcCheckboxRippleFC />
-      <MdcCheckboxFocusRingFC />
+      <CheckboxNativeControl {...rest} />
+      <CheckboxBackground>
+        <CheckboxCheckmark />
+        <CheckboxMixedmark />
+      </CheckboxBackground>
+      <CheckboxRipple />
+      <CheckboxFocusRing />
       {children}
     </div>
   )
 }
 
-export interface MdcCheckboxNativeControlFCProps
+export interface CheckboxNativeControlProps
   extends JSXBase.InputHTMLAttributes<HTMLInputElement> {
   indeterminate?: boolean
 }
 
-export const MdcCheckboxNativeControlFC: FunctionalComponent<
-MdcCheckboxNativeControlFCProps
+export const CheckboxNativeControl: FunctionalComponent<
+CheckboxNativeControlProps
 > = (props, children) => {
   const { class: className, indeterminate, ...rest } = props
   return (
@@ -56,11 +56,11 @@ MdcCheckboxNativeControlFCProps
   )
 }
 
-export interface MdcCheckboxBackgroundFCProps
+export interface CheckboxBackgroundProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcCheckboxBackgroundFC: FunctionalComponent<
-MdcCheckboxBackgroundFCProps
+export const CheckboxBackground: FunctionalComponent<
+CheckboxBackgroundProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -76,11 +76,11 @@ MdcCheckboxBackgroundFCProps
   )
 }
 
-export interface MdcCheckboxCheckmarkFCProps
+export interface CheckboxCheckmarkProps
   extends JSXBase.SVGAttributes<SVGElement> {}
 
-export const MdcCheckboxCheckmarkFC: FunctionalComponent<
-MdcCheckboxCheckmarkFCProps
+export const CheckboxCheckmark: FunctionalComponent<
+CheckboxCheckmarkProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -93,17 +93,17 @@ MdcCheckboxCheckmarkFCProps
       viewBox='0 0 24 24'
       {...rest}
     >
-      <MdcCheckboxCheckmarkPathFC />
+      <CheckboxCheckmarkPath />
       {children}
     </svg>
   )
 }
 
-export interface MdcCheckboxCheckmarkPathFCProps
+export interface CheckboxCheckmarkPathProps
   extends JSXBase.SVGAttributes<SVGPathElement> {}
 
-export const MdcCheckboxCheckmarkPathFC: FunctionalComponent<
-MdcCheckboxCheckmarkPathFCProps
+export const CheckboxCheckmarkPath: FunctionalComponent<
+CheckboxCheckmarkPathProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -121,11 +121,11 @@ MdcCheckboxCheckmarkPathFCProps
   )
 }
 
-export interface MdcCheckboxMixedmarkFCProps
+export interface CheckboxMixedmarkProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcCheckboxMixedmarkFC: FunctionalComponent<
-MdcCheckboxMixedmarkFCProps
+export const CheckboxMixedmark: FunctionalComponent<
+CheckboxMixedmarkProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -141,10 +141,10 @@ MdcCheckboxMixedmarkFCProps
   )
 }
 
-export interface MdcCheckboxRippleFCProps
+export interface CheckboxRippleProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcCheckboxRippleFC: FunctionalComponent<MdcCheckboxRippleFCProps> = (
+export const CheckboxRipple: FunctionalComponent<CheckboxRippleProps> = (
   props,
   children
 ) => {
@@ -162,10 +162,10 @@ export const MdcCheckboxRippleFC: FunctionalComponent<MdcCheckboxRippleFCProps> 
   )
 }
 
-export interface MdcCheckboxFocusRingFCProps
+export interface CheckboxFocusRingProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcCheckboxFocusRingFC: FunctionalComponent<MdcCheckboxFocusRingFCProps> = (
+export const CheckboxFocusRing: FunctionalComponent<CheckboxFocusRingProps> = (
   props,
   children
 ) => {

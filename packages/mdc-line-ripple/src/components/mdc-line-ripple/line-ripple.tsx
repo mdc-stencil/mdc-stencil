@@ -1,12 +1,12 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcFloatingLabelFCProps
+export interface LineRippleProps
   extends JSXBase.ButtonHTMLAttributes<HTMLSpanElement> {
-  kind?: 'float-above' | 'shake' | 'required'
+  kind?: 'active' | 'deactivating'
 }
 
-export const MdcFloatingLabelFC: FunctionalComponent<MdcFloatingLabelFCProps> = (
+export const LineRipple: FunctionalComponent<LineRippleProps> = (
   props,
   children
 ) => {
@@ -17,8 +17,8 @@ export const MdcFloatingLabelFC: FunctionalComponent<MdcFloatingLabelFCProps> = 
   } = props
   return (
     <span class={{
-      'mdc-floating-label': true,
-      [`mdc-floating-label--${kind}`]: kind !== undefined,
+      'mdc-line-ripple': true,
+      [`mdc-line-ripple--${kind}`]: kind !== undefined,
       ...classNames(className)
     }}
       {...rest}

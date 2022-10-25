@@ -1,14 +1,14 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcButtonFCProps
+export interface ButtonProps
   extends JSXBase.ButtonHTMLAttributes<HTMLButtonElement> {
   kind?: 'unelevated' | 'raised' | 'outlined'
   'icon-leading'?: boolean
   'icon-trailing'?: boolean
 }
 
-export const MdcButtonFC: FunctionalComponent<MdcButtonFCProps> = (
+export const Button: FunctionalComponent<ButtonProps> = (
   props,
   children
 ) => {
@@ -29,18 +29,18 @@ export const MdcButtonFC: FunctionalComponent<MdcButtonFCProps> = (
     }}
       {...rest}
     >
-      <MdcButtonRippleFC />
-      <MdcButtonFocusRingFC />
+      <ButtonRipple />
+      <ButtonFocusRing />
       {children}
     </button>
   )
 }
 
-export interface MdcButtonRippleFCProps
+export interface ButtonRippleProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcButtonRippleFC: FunctionalComponent<MdcButtonRippleFCProps> = (
+export const ButtonRipple: FunctionalComponent<ButtonRippleProps> = (
   props,
   children
 ) => {
@@ -57,11 +57,11 @@ export const MdcButtonRippleFC: FunctionalComponent<MdcButtonRippleFCProps> = (
   )
 }
 
-export interface MdcButtonFocusRingFCProps
+export interface ButtonFocusRingProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcButtonFocusRingFC: FunctionalComponent<MdcButtonFocusRingFCProps> = (
+export const ButtonFocusRing: FunctionalComponent<ButtonFocusRingProps> = (
   props,
   children
 ) => {
@@ -78,11 +78,11 @@ export const MdcButtonFocusRingFC: FunctionalComponent<MdcButtonFocusRingFCProps
   )
 }
 
-export interface MdcButtonLabelFCProps
+export interface ButtonLabelProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcButtonLabelFC: FunctionalComponent<MdcButtonLabelFCProps> = (
+export const ButtonLabel: FunctionalComponent<ButtonLabelProps> = (
   props,
   children
 ) => {
@@ -99,11 +99,11 @@ export const MdcButtonLabelFC: FunctionalComponent<MdcButtonLabelFCProps> = (
   )
 }
 
-export interface MdcButtonTouchFCProps
+export interface ButtonTouchProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcButtonTouchFC: FunctionalComponent<MdcButtonTouchFCProps> = (
+export const ButtonTouch: FunctionalComponent<ButtonTouchProps> = (
   props,
   children
 ) => {

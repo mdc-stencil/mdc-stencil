@@ -1,2 +1,2 @@
 export * from '@material/line-ripple'
-export * from './mdc-line-ripple.fc'
+export * from './line-ripple'

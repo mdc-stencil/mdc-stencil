@@ -1,11 +1,11 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcBottomAppBarFCProps
+export interface BottomAppBarProps
   extends JSXBase.HTMLAttributes<HTMLElement> {
 }
 
-export const MdcBottomAppBarFC: FunctionalComponent<MdcBottomAppBarFCProps> = (
+export const BottomAppBar: FunctionalComponent<BottomAppBarProps> = (
   props,
   children
 ) => {
@@ -22,11 +22,11 @@ export const MdcBottomAppBarFC: FunctionalComponent<MdcBottomAppBarFCProps> = (
   )
 }
 
-export interface MdcBottomAppBarRowFCProps
+export interface BottomAppBarRowProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcBottomAppBarRowFC: FunctionalComponent<MdcBottomAppBarRowFCProps> = (
+export const BottomAppBarRow: FunctionalComponent<BottomAppBarRowProps> = (
   props,
   children
 ) => {
@@ -43,12 +43,12 @@ export const MdcBottomAppBarRowFC: FunctionalComponent<MdcBottomAppBarRowFCProps
   )
 }
 
-export interface MdcBottomAppBarSectionFCProps
+export interface BottomAppBarSectionProps
   extends JSXBase.HTMLAttributes<HTMLElement> {
   align?: 'start' | 'end'
 }
 
-export const MdcBottomAppBarSectionFC: FunctionalComponent<MdcBottomAppBarSectionFCProps> = (
+export const BottomAppBarSection: FunctionalComponent<BottomAppBarSectionProps> = (
   props,
   children
 ) => {

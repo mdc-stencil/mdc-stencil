@@ -1,1 +1,223 @@
-@forward "./mdc-bottom-app-bar";
+// This package is just a small adaption of the @material/top-app-bar package
+//
+// Copyright 2018 Google Inc.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+//
+
+// stylelint-disable selector-class-pattern --
+// Selector '.mdc-*' should only be used in this project.
+
+@use '@material/elevation/mixins' as elevation-mixins;
+@use '@material/animation/variables' as animation-variables;
+@use '@material/rtl/rtl';
+@use '@material/typography/typography';
+@use './mixins';
+@use './variables';
+
+// postcss-bem-linter: define bottom-app-bar
+.mdc-bottom-app-bar {
+  @include mixins.fill-color-accessible(primary);
+  @include mixins.icon-ink-color(on-primary);
+
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 4;
+  bottom: 0;
+
+  &__row {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: variables.$row-height;
+  }
+
+  &__section {
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 0;
+    padding: variables.$section-vertical-padding variables.$section-horizontal-padding;
+    z-index: 1;
+
+    &--align-start {
+      justify-content: flex-start;
+      order: -1;
+    }
+
+    &--align-end {
+      justify-content: flex-end;
+      order: 1;
+    }
+  }
+
+  &__title {
+    @include typography.typography(headline6);
+    @include rtl.reflexive-box(padding, left, variables.$title-left-padding);
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+@at-root {
+  @include mixins.short-shape-radius(24px);
+}
+
+.mdc-bottom-app-bar--short {
+  bottom: 0;
+  @include rtl.ignore-next-line();
+  right: auto;
+  @include rtl.ignore-next-line();
+  left: 0;
+  width: 100%;
+  transition: width 250ms animation-variables.$standard-curve-timing-function;
+
+  @include rtl.rtl {
+    @include rtl.ignore-next-line();
+    right: 0;
+    @include rtl.ignore-next-line();
+    left: auto;
+  }
+
+  .mdc-bottom-app-bar__row {
+    height: variables.$mobile-row-height;
+  }
+
+  .mdc-bottom-app-bar__section {
+    padding: variables.$mobile-section-padding;
+  }
+
+  .mdc-bottom-app-bar__title {
+    transition: opacity 200ms animation-variables.$standard-curve-timing-function;
+    opacity: 1;
+  }
+}
+
+.mdc-bottom-app-bar--short-collapsed {
+  @include elevation-mixins.elevation(4);
+
+  width: variables.$short-collapsed-width;
+  transition: width 300ms animation-variables.$standard-curve-timing-function;
+
+  .mdc-bottom-app-bar__title {
+    display: none;
+  }
+
+  .mdc-bottom-app-bar__action-item {
+    transition: padding 150ms animation-variables.$standard-curve-timing-function;
+  }
+}
+
+.mdc-bottom-app-bar--short-collapsed.mdc-bottom-app-bar--short-has-action-item {
+  width: variables.$short-collapsed-width * 2;
+
+  .mdc-bottom-app-bar__section--align-end {
+    @include rtl.reflexive-box(padding, right, 12px);
+  }
+}
+
+.mdc-bottom-app-bar--dense {
+  .mdc-bottom-app-bar__row {
+    height: variables.$dense-row-height;
+  }
+
+  .mdc-bottom-app-bar__section {
+    padding: 0 variables.$dense-section-horizontal-padding;
+  }
+
+  .mdc-bottom-app-bar__title {
+    @include rtl.reflexive-box(padding,
+      left,
+      variables.$dense-title-left-padding );
+  }
+}
+
+.mdc-bottom-app-bar--prominent {
+  .mdc-bottom-app-bar__row {
+    height: variables.$prominent-row-height;
+  }
+
+  .mdc-bottom-app-bar__title {
+    align-self: flex-end;
+    padding-bottom: variables.$prominent-title-bottom-padding;
+  }
+
+  .mdc-bottom-app-bar__action-item,
+  .mdc-bottom-app-bar__navigation-icon {
+    align-self: flex-start;
+  }
+}
+
+.mdc-bottom-app-bar--fixed {
+  transition: box-shadow 200ms linear;
+}
+
+.mdc-bottom-app-bar--fixed-scrolled {
+  @include elevation-mixins.elevation(4);
+
+  transition: box-shadow 200ms linear;
+}
+
+// Specific styles for dense and prominent styled bottom app bar
+.mdc-bottom-app-bar--dense.mdc-bottom-app-bar--prominent {
+  .mdc-bottom-app-bar__row {
+    height: variables.$dense-row-height * 2;
+  }
+
+  .mdc-bottom-app-bar__section {
+    padding: 0 variables.$section-horizontal-padding;
+  }
+
+  .mdc-bottom-app-bar__title {
+    @include rtl.reflexive-box(padding, left, variables.$title-left-padding);
+
+    padding-bottom: variables.$dense-prominent-title-bottom-padding;
+  }
+}
+
+.mdc-bottom-app-bar--fixed-adjust {
+  padding-bottom: variables.$row-height;
+}
+
+.mdc-bottom-app-bar--dense-fixed-adjust {
+  padding-bottom: variables.$dense-row-height;
+}
+
+.mdc-bottom-app-bar--short-fixed-adjust {
+  padding-bottom: variables.$mobile-row-height;
+}
+
+.mdc-bottom-app-bar--prominent-fixed-adjust {
+  padding-bottom: variables.$prominent-row-height;
+}
+
+.mdc-bottom-app-bar--dense-prominent-fixed-adjust {
+  padding-bottom: variables.$dense-row-height * 2;
+}
+
+// Mobile Styles
+@include mixins.mobile-breakpoint_;

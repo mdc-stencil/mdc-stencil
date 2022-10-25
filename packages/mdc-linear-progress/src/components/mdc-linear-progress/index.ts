@@ -1,2 +1,2 @@
-export * from './mdc-linear-progress.fc'
 export * from '@material/linear-progress'
+export * from './linear-progress'

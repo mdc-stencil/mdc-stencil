@@ -1,23 +1,23 @@
-import { MdcCheckboxFC, MdcCheckboxFCProps } from '@mdc-stencil/checkbox'
+import { Checkbox, CheckboxProps } from '@mdc-stencil/checkbox'
 import { classNames } from '@mdc-stencil/common'
 import {
-  MdcIconButtonFC,
-  MdcIconButtonFCProps
+  IconButton,
+  IconButtonProps
 } from '@mdc-stencil/icon-button'
 import {
-  MdcLinearProgressFC,
-  MdcLinearProgressFCProps
+  LinearProgress,
+  LinearProgressProps
 } from '@mdc-stencil/linear-progress'
-import { MdcSelectFC, MdcSelectFCProps } from '@mdc-stencil/select'
+import { Select, SelectProps } from '@mdc-stencil/select'
 import { FunctionalComponent, h } from '@stencil/core'
 import { JSXBase } from '@stencil/core/internal'
 
-export interface MdcDataTableFCProps
+export interface DataTableProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   'sticky-header'?: boolean
 }
 
-export const MdcDataTableFC: FunctionalComponent<MdcDataTableFCProps> = (
+export const DataTable: FunctionalComponent<DataTableProps> = (
   props,
   children
 ) => {
@@ -36,11 +36,11 @@ export const MdcDataTableFC: FunctionalComponent<MdcDataTableFCProps> = (
   )
 }
 
-export interface MdcDataTableTableContainerFCProps
+export interface DataTableTableContainerProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTableTableContainerFC: FunctionalComponent<
-MdcDataTableTableContainerFCProps
+export const DataTableTableContainer: FunctionalComponent<
+DataTableTableContainerProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -56,10 +56,10 @@ MdcDataTableTableContainerFCProps
   )
 }
 
-export interface MdcDataTableTableFCProps
+export interface DataTableTableProps
   extends JSXBase.TableHTMLAttributes<HTMLTableElement> {}
 
-export const MdcDataTableTableFC: FunctionalComponent<MdcDataTableTableFCProps> = (
+export const DataTableTable: FunctionalComponent<DataTableTableProps> = (
   props,
   children
 ) => {
@@ -77,11 +77,11 @@ export const MdcDataTableTableFC: FunctionalComponent<MdcDataTableTableFCProps> 
   )
 }
 
-export interface MdcDataTableHeaderRowFCProps
+export interface DataTableHeaderRowProps
   extends JSXBase.HTMLAttributes<HTMLTableRowElement> {}
 
-export const MdcDataTableHeaderRowFC: FunctionalComponent<
-MdcDataTableHeaderRowFCProps
+export const DataTableHeaderRow: FunctionalComponent<
+DataTableHeaderRowProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -97,7 +97,7 @@ MdcDataTableHeaderRowFCProps
   )
 }
 
-export interface MdcDataTableHeaderCellFCProps
+export interface DataTableHeaderCellProps
   extends JSXBase.ThHTMLAttributes<HTMLTableCellElement> {
   checkbox?: boolean
   numeric?: boolean
@@ -105,8 +105,8 @@ export interface MdcDataTableHeaderCellFCProps
   'with-sort'?: boolean
 }
 
-export const MdcDataTableHeaderCellFC: FunctionalComponent<
-MdcDataTableHeaderCellFCProps
+export const DataTableHeaderCell: FunctionalComponent<
+DataTableHeaderCellProps
 > = (props, children) => {
   const {
     class: className,
@@ -140,11 +140,11 @@ MdcDataTableHeaderCellFCProps
   )
 }
 
-export interface MdcDataTableHeaderCellWrapperFCProps
+export interface DataTableHeaderCellWrapperProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTableHeaderCellWrapperFC: FunctionalComponent<
-MdcDataTableHeaderCellWrapperFCProps
+export const DataTableHeaderCellWrapper: FunctionalComponent<
+DataTableHeaderCellWrapperProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -160,11 +160,11 @@ MdcDataTableHeaderCellWrapperFCProps
   )
 }
 
-export interface MdcDataTableHeaderCellLabelFCProps
+export interface DataTableHeaderCellLabelProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTableHeaderCellLabelFC: FunctionalComponent<
-MdcDataTableHeaderCellLabelFCProps
+export const DataTableHeaderCellLabel: FunctionalComponent<
+DataTableHeaderCellLabelProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -180,14 +180,14 @@ MdcDataTableHeaderCellLabelFCProps
   )
 }
 
-export interface MdcDataTableHeaderRowCheckboxFCProps extends MdcCheckboxFCProps {}
+export interface DataTableHeaderRowCheckboxProps extends CheckboxProps {}
 
-export const MdcDataTableHeaderRowCheckboxFC: FunctionalComponent<
-MdcDataTableHeaderRowCheckboxFCProps
+export const DataTableHeaderRowCheckbox: FunctionalComponent<
+DataTableHeaderRowCheckboxProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
-    <MdcCheckboxFC
+    <Checkbox
       class={{
         'mdc-data-table__header-row-checkbox': true,
         ...classNames(className)
@@ -195,15 +195,15 @@ MdcDataTableHeaderRowCheckboxFCProps
       {...rest}
     >
       {children}
-    </MdcCheckboxFC>
+    </Checkbox>
   )
 }
 
-export interface MdcDataTableContentFCProps
+export interface DataTableContentProps
   extends JSXBase.HTMLAttributes<HTMLElement> {}
 
-export const MdcDataTableContentFC: FunctionalComponent<
-MdcDataTableContentFCProps
+export const DataTableContent: FunctionalComponent<
+DataTableContentProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -219,12 +219,12 @@ MdcDataTableContentFCProps
   )
 }
 
-export interface MdcDataTableRowFCProps
+export interface DataTableRowProps
   extends JSXBase.HTMLAttributes<HTMLTableRowElement> {
   selected?: boolean
 }
 
-export const MdcDataTableRowFC: FunctionalComponent<MdcDataTableRowFCProps> = (
+export const DataTableRow: FunctionalComponent<DataTableRowProps> = (
   props,
   children
 ) => {
@@ -243,14 +243,14 @@ export const MdcDataTableRowFC: FunctionalComponent<MdcDataTableRowFCProps> = (
   )
 }
 
-export interface MdcDataTableRowCheckboxFCProps extends MdcCheckboxFCProps {}
+export interface DataTableRowCheckboxProps extends CheckboxProps {}
 
-export const MdcDataTableRowCheckboxFC: FunctionalComponent<
-MdcDataTableRowCheckboxFCProps
+export const DataTableRowCheckbox: FunctionalComponent<
+DataTableRowCheckboxProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
-    <MdcCheckboxFC
+    <Checkbox
       class={{
         'mdc-data-table__row-checkbox': true,
         ...classNames(className)
@@ -258,29 +258,29 @@ MdcDataTableRowCheckboxFCProps
       {...rest}
     >
       {children}
-    </MdcCheckboxFC>
+    </Checkbox>
   )
 }
 
-export interface MdcDataTableCellFCProps {
+export interface DataTableCellProps {
   checkbox?: boolean
   numeric?: boolean
 }
 
-export interface MdcDataTableCellTdFCProps
+export interface DataTableCellTdProps
   extends JSXBase.TdHTMLAttributes<HTMLTableCellElement>,
-  MdcDataTableCellFCProps {
+  DataTableCellProps {
   tag?: 'td'
 }
 
-export interface MdcDataTableCellThFCProps
+export interface DataTableCellThProps
   extends JSXBase.ThHTMLAttributes<HTMLTableCellElement>,
-  MdcDataTableCellFCProps {
+  DataTableCellProps {
   tag: 'th'
 }
 
-export const MdcDataTableCellFC: FunctionalComponent<
-MdcDataTableCellTdFCProps | MdcDataTableCellThFCProps
+export const DataTableCell: FunctionalComponent<
+DataTableCellTdProps | DataTableCellThProps
 > = (props, children) => {
   const {
     tag: Tag = 'td',
@@ -304,14 +304,14 @@ MdcDataTableCellTdFCProps | MdcDataTableCellThFCProps
   )
 }
 
-export interface MdcDataTableSortIconButtonFCProps extends MdcIconButtonFCProps {}
+export interface DataTableSortIconButtonProps extends IconButtonProps {}
 
-export const MdcDataTableSortIconButtonFC: FunctionalComponent<
-MdcDataTableSortIconButtonFCProps
+export const DataTableSortIconButton: FunctionalComponent<
+DataTableSortIconButtonProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
-    <MdcIconButtonFC
+    <IconButton
       class={{
         'mdc-data-table__sort-icon-button': true,
         ...classNames(className)
@@ -319,15 +319,15 @@ MdcDataTableSortIconButtonFCProps
       {...rest}
     >
       {children}
-    </MdcIconButtonFC>
+    </IconButton>
   )
 }
 
-export interface MdcDataTableSortStatusFCProps
+export interface DataTableSortStatusProps
   extends JSXBase.HTMLAttributes<HTMLElement> {}
 
-export const MdcDataTableSortStatusFC: FunctionalComponent<
-MdcDataTableSortStatusFCProps
+export const DataTableSortStatus: FunctionalComponent<
+DataTableSortStatusProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -344,11 +344,11 @@ MdcDataTableSortStatusFCProps
   )
 }
 
-export interface MdcDataTablePaginationFCProps
+export interface DataTablePaginationProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTablePaginationFC: FunctionalComponent<
-MdcDataTablePaginationFCProps
+export const DataTablePagination: FunctionalComponent<
+DataTablePaginationProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -364,11 +364,11 @@ MdcDataTablePaginationFCProps
   )
 }
 
-export interface MdcDataTablePaginationTrailingFCProps
+export interface DataTablePaginationTrailingProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTablePaginationTrailingFC: FunctionalComponent<
-MdcDataTablePaginationTrailingFCProps
+export const DataTablePaginationTrailing: FunctionalComponent<
+DataTablePaginationTrailingProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -384,11 +384,11 @@ MdcDataTablePaginationTrailingFCProps
   )
 }
 
-export interface MdcDataTablePaginationRowsPerPageFCProps
+export interface DataTablePaginationRowsPerPageProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTablePaginationRowsPerPageFC: FunctionalComponent<
-MdcDataTablePaginationRowsPerPageFCProps
+export const DataTablePaginationRowsPerPage: FunctionalComponent<
+DataTablePaginationRowsPerPageProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -404,11 +404,11 @@ MdcDataTablePaginationRowsPerPageFCProps
   )
 }
 
-export interface MdcDataTablePaginationRowsPerPageLabelFCProps
+export interface DataTablePaginationRowsPerPageLabelProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTablePaginationRowsPerPageLabelFC: FunctionalComponent<
-MdcDataTablePaginationRowsPerPageLabelFCProps
+export const DataTablePaginationRowsPerPageLabel: FunctionalComponent<
+DataTablePaginationRowsPerPageLabelProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -424,15 +424,15 @@ MdcDataTablePaginationRowsPerPageLabelFCProps
   )
 }
 
-export interface MdcDataTablePaginationRowsPerPageSelectFCProps
-  extends MdcSelectFCProps {}
+export interface DataTablePaginationRowsPerPageSelectProps
+  extends SelectProps {}
 
-export const MdcDataTablePaginationRowsPerPageSelectFC: FunctionalComponent<
-MdcDataTablePaginationRowsPerPageSelectFCProps
+export const DataTablePaginationRowsPerPageSelect: FunctionalComponent<
+DataTablePaginationRowsPerPageSelectProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
-    <MdcSelectFC
+    <Select
       class={{
         'mdc-data-table__pagination-rows-per-page-select': true,
         ...classNames(className)
@@ -440,15 +440,15 @@ MdcDataTablePaginationRowsPerPageSelectFCProps
       {...rest}
     >
       {children}
-    </MdcSelectFC>
+    </Select>
   )
 }
 
-export interface MdcDataTablePaginationNavigationFCProps
+export interface DataTablePaginationNavigationProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTablePaginationNavigationFC: FunctionalComponent<
-MdcDataTablePaginationNavigationFCProps
+export const DataTablePaginationNavigation: FunctionalComponent<
+DataTablePaginationNavigationProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -464,11 +464,11 @@ MdcDataTablePaginationNavigationFCProps
   )
 }
 
-export interface MdcDataTablePaginationTotalFCProps
+export interface DataTablePaginationTotalProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTablePaginationTotalFC: FunctionalComponent<
-MdcDataTablePaginationTotalFCProps
+export const DataTablePaginationTotal: FunctionalComponent<
+DataTablePaginationTotalProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -484,14 +484,14 @@ MdcDataTablePaginationTotalFCProps
   )
 }
 
-export interface MdcDataTablePaginationButtonFCProps extends MdcIconButtonFCProps {}
+export interface DataTablePaginationButtonProps extends IconButtonProps {}
 
-export const MdcDataTablePaginationButtonFC: FunctionalComponent<
-MdcDataTablePaginationButtonFCProps
+export const DataTablePaginationButton: FunctionalComponent<
+DataTablePaginationButtonProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
-    <MdcIconButtonFC
+    <IconButton
       class={{
         'mdc-data-table__pagination-button': true,
         ...classNames(className)
@@ -499,15 +499,15 @@ MdcDataTablePaginationButtonFCProps
       {...rest}
     >
       {children}
-    </MdcIconButtonFC>
+    </IconButton>
   )
 }
 
-export interface MdcDataTableProgressIndicatorFCProps
+export interface DataTableProgressIndicatorProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTableProgressIndicatorFC: FunctionalComponent<
-MdcDataTableProgressIndicatorFCProps
+export const DataTableProgressIndicator: FunctionalComponent<
+DataTableProgressIndicatorProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -523,10 +523,10 @@ MdcDataTableProgressIndicatorFCProps
   )
 }
 
-export interface MdcDataTableScrimFCProps
+export interface DataTableScrimProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDataTableScrimFC: FunctionalComponent<MdcDataTableScrimFCProps> = (
+export const DataTableScrim: FunctionalComponent<DataTableScrimProps> = (
   props,
   children
 ) => {
@@ -544,15 +544,15 @@ export const MdcDataTableScrimFC: FunctionalComponent<MdcDataTableScrimFCProps> 
   )
 }
 
-export interface MdcDataTableLinearProgressFCProps
-  extends MdcLinearProgressFCProps {}
+export interface DataTableLinearProgressProps
+  extends LinearProgressProps {}
 
-export const MdcDataTableLinearProgressFC: FunctionalComponent<
-MdcDataTableLinearProgressFCProps
+export const DataTableLinearProgress: FunctionalComponent<
+DataTableLinearProgressProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
-    <MdcLinearProgressFC
+    <LinearProgress
       class={{
         'mdc-data-table__linear-progress': true,
         ...classNames(className)
@@ -560,6 +560,6 @@ MdcDataTableLinearProgressFCProps
       {...rest}
     >
       {children}
-    </MdcLinearProgressFC>
+    </LinearProgress>
   )
 }

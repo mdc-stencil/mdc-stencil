@@ -1,7 +1,7 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcTextFieldFCProps
+export interface TextFieldProps
   extends JSXBase.LabelHTMLAttributes<HTMLLabelElement> {
   kind?: 'filled' | 'outlined'
   textarea?: boolean
@@ -16,7 +16,7 @@ export interface MdcTextFieldFCProps
   'internal-counter'?: boolean
 }
 
-export const MdcTextFieldFC: FunctionalComponent<MdcTextFieldFCProps> = (
+export const TextField: FunctionalComponent<TextFieldProps> = (
   props,
   children
 ) => {
@@ -58,11 +58,11 @@ export const MdcTextFieldFC: FunctionalComponent<MdcTextFieldFCProps> = (
   )
 }
 
-export interface MdcTextFieldRippleFCProps
+export interface TextFieldRippleProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcTextFieldRippleFC: FunctionalComponent<MdcTextFieldRippleFCProps> = (
+export const TextFieldRipple: FunctionalComponent<TextFieldRippleProps> = (
   props,
   children
 ) => {
@@ -79,11 +79,11 @@ export const MdcTextFieldRippleFC: FunctionalComponent<MdcTextFieldRippleFCProps
   )
 }
 
-export interface MdcTextFieldInputFCProps
+export interface TextFieldInputProps
   extends JSXBase.InputHTMLAttributes<HTMLInputElement> {
 }
 
-export const MdcTextFieldInputFC: FunctionalComponent<MdcTextFieldInputFCProps> = (
+export const TextFieldInput: FunctionalComponent<TextFieldInputProps> = (
   props,
   children
 ) => {
@@ -100,11 +100,11 @@ export const MdcTextFieldInputFC: FunctionalComponent<MdcTextFieldInputFCProps> 
   )
 }
 
-export interface MdcTextFieldHelperLineFCProps
+export interface TextFieldHelperLineProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcTextFieldHelperLineFC: FunctionalComponent<MdcTextFieldHelperLineFCProps> = (
+export const TextFieldHelperLine: FunctionalComponent<TextFieldHelperLineProps> = (
   props,
   children
 ) => {
@@ -121,11 +121,11 @@ export const MdcTextFieldHelperLineFC: FunctionalComponent<MdcTextFieldHelperLin
   )
 }
 
-export interface MdcTextFieldHelperTextFCProps
+export interface TextFieldHelperTextProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcTextFieldHelperTextFC: FunctionalComponent<MdcTextFieldHelperTextFCProps> = (
+export const TextFieldHelperText: FunctionalComponent<TextFieldHelperTextProps> = (
   props,
   children
 ) => {
@@ -142,11 +142,11 @@ export const MdcTextFieldHelperTextFC: FunctionalComponent<MdcTextFieldHelperTex
   )
 }
 
-export interface MdcTextFieldResizerFCProps
+export interface TextFieldResizerProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcTextFieldResizerFC: FunctionalComponent<MdcTextFieldResizerFCProps> = (
+export const TextFieldResizer: FunctionalComponent<TextFieldResizerProps> = (
   props,
   children
 ) => {

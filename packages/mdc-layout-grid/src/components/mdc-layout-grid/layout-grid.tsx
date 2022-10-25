@@ -1,10 +1,10 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcLayoutGridFCProps
+export interface LayoutGridProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcLayoutGridFC: FunctionalComponent<MdcLayoutGridFCProps> = (
+export const LayoutGrid: FunctionalComponent<LayoutGridProps> = (
   props,
   children
 ) => {
@@ -22,10 +22,10 @@ export const MdcLayoutGridFC: FunctionalComponent<MdcLayoutGridFCProps> = (
   )
 }
 
-export interface MdcLayoutGridInnerFCProps
+export interface LayoutGridInnerProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcLayoutGridInnerFC: FunctionalComponent<MdcLayoutGridInnerFCProps> = (
+export const LayoutGridInner: FunctionalComponent<LayoutGridInnerProps> = (
   props,
   children
 ) => {
@@ -43,7 +43,7 @@ export const MdcLayoutGridInnerFC: FunctionalComponent<MdcLayoutGridInnerFCProps
   )
 }
 
-export interface MdcLayoutGridCellFCProps
+export interface LayoutGridCellProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   span?: number
   spanDesktop?: number
@@ -52,7 +52,7 @@ export interface MdcLayoutGridCellFCProps
   align?: 'top' | 'middle' | 'bottom'
 }
 
-export const MdcLayoutGridCellFC: FunctionalComponent<MdcLayoutGridCellFCProps> = (
+export const LayoutGridCell: FunctionalComponent<LayoutGridCellProps> = (
   props,
   children
 ) => {

@@ -1,1 +1,1 @@
-export * from './mdc-layout-grid.fc'
+export * from './layout-grid'

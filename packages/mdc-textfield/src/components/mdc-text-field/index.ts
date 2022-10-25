@@ -1,2 +1,2 @@
 export * from '@material/textfield'
-export * from './mdc-text-field.fc'
+export * from './text-field'

@@ -1,1 +1,1 @@
-export * from './mdc-touch-target.fc'
+export * from './touch-target'

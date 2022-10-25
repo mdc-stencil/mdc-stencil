@@ -1,8 +1,8 @@
 import { classNames } from '@mdc-stencil/common'
-import { MdcMenuFC, MdcMenuFCProps } from '@mdc-stencil/menu'
+import { Menu, MenuProps } from '@mdc-stencil/menu'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcSelectFCProps
+export interface SelectProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   filled?: boolean
   required?: boolean
@@ -12,7 +12,7 @@ export interface MdcSelectFCProps
   kind?: 'outlined'
 }
 
-export const MdcSelectFC: FunctionalComponent<MdcSelectFCProps> = (
+export const Select: FunctionalComponent<SelectProps> = (
   props,
   children
 ) => {
@@ -36,11 +36,11 @@ export const MdcSelectFC: FunctionalComponent<MdcSelectFCProps> = (
   )
 }
 
-export interface MdcSelectAnchorFCProps
+export interface SelectAnchorProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcSelectAnchorFC: FunctionalComponent<MdcSelectAnchorFCProps> = (
+export const SelectAnchor: FunctionalComponent<SelectAnchorProps> = (
   props,
   children
 ) => {
@@ -58,11 +58,11 @@ export const MdcSelectAnchorFC: FunctionalComponent<MdcSelectAnchorFCProps> = (
   )
 }
 
-export interface MdcSelectRippleFCProps
+export interface SelectRippleProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcSelectRippleFC: FunctionalComponent<MdcSelectRippleFCProps> = (
+export const SelectRipple: FunctionalComponent<SelectRippleProps> = (
   props,
   children
 ) => {
@@ -80,11 +80,11 @@ export const MdcSelectRippleFC: FunctionalComponent<MdcSelectRippleFCProps> = (
   )
 }
 
-export interface MdcSelectSelectedTextContainerFCProps
+export interface SelectSelectedTextContainerProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcSelectSelectedTextContainerFC: FunctionalComponent<MdcSelectSelectedTextContainerFCProps> = (
+export const SelectSelectedTextContainer: FunctionalComponent<SelectSelectedTextContainerProps> = (
   props,
   children
 ) => {
@@ -102,11 +102,11 @@ export const MdcSelectSelectedTextContainerFC: FunctionalComponent<MdcSelectSele
   )
 }
 
-export interface MdcSelectSelectedTextFCProps
+export interface SelectSelectedTextProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcSelectSelectedTextFC: FunctionalComponent<MdcSelectSelectedTextFCProps> = (
+export const SelectSelectedText: FunctionalComponent<SelectSelectedTextProps> = (
   props,
   children
 ) => {
@@ -124,11 +124,11 @@ export const MdcSelectSelectedTextFC: FunctionalComponent<MdcSelectSelectedTextF
   )
 }
 
-export interface MdcSelectDropdownIconFCProps
+export interface SelectDropdownIconProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcSelectDropdownIconFC: FunctionalComponent<MdcSelectDropdownIconFCProps> = (
+export const SelectDropdownIcon: FunctionalComponent<SelectDropdownIconProps> = (
   props,
   children
 ) => {
@@ -146,11 +146,11 @@ export const MdcSelectDropdownIconFC: FunctionalComponent<MdcSelectDropdownIconF
   )
 }
 
-export interface MdcSelectDropdownIconGraphicFCProps
+export interface SelectDropdownIconGraphicProps
   extends JSXBase.SVGAttributes<SVGElement> {
 }
 
-export const MdcSelectDropdownIconGraphicFC: FunctionalComponent<MdcSelectDropdownIconGraphicFCProps> = (
+export const SelectDropdownIconGraphic: FunctionalComponent<SelectDropdownIconGraphicProps> = (
   props,
   children
 ) => {
@@ -166,18 +166,18 @@ export const MdcSelectDropdownIconGraphicFC: FunctionalComponent<MdcSelectDropdo
       focusable='false'
       {...rest}
     >
-      <MdcSelectDropdownIconInactiveFC />
-      <MdcSelectDropdownIconActiveFC />
+      <SelectDropdownIconInactive />
+      <SelectDropdownIconActive />
       {children}
     </svg>
   )
 }
 
-interface MdcSelectDropdownIconInactiveFCProps
+interface SelectDropdownIconInactiveProps
   extends JSXBase.SVGAttributes<SVGPolygonElement> {
 }
 
-const MdcSelectDropdownIconInactiveFC: FunctionalComponent<MdcSelectDropdownIconInactiveFCProps> = (
+const SelectDropdownIconInactive: FunctionalComponent<SelectDropdownIconInactiveProps> = (
   props,
   children
 ) => {
@@ -198,11 +198,11 @@ const MdcSelectDropdownIconInactiveFC: FunctionalComponent<MdcSelectDropdownIcon
   )
 }
 
-interface MdcSelectDropdownIconActiveFCProps
+interface SelectDropdownIconActiveProps
   extends JSXBase.SVGAttributes<SVGPolygonElement> {
 }
 
-const MdcSelectDropdownIconActiveFC: FunctionalComponent<MdcSelectDropdownIconActiveFCProps> = (
+const SelectDropdownIconActive: FunctionalComponent<SelectDropdownIconActiveProps> = (
   props,
   children
 ) => {
@@ -223,17 +223,17 @@ const MdcSelectDropdownIconActiveFC: FunctionalComponent<MdcSelectDropdownIconAc
   )
 }
 
-export interface MdcSelectMenuFCProps
-  extends MdcMenuFCProps {
+export interface SelectMenuProps
+  extends MenuProps {
 }
 
-export const MdcSelectMenuFC: FunctionalComponent<MdcSelectMenuFCProps> = (
+export const SelectMenu: FunctionalComponent<SelectMenuProps> = (
   props,
   children
 ) => {
   const { class: className, ...rest } = props
   return (
-    <MdcMenuFC
+    <Menu
       class={{
         'mdc-select__menu': true,
         ...classNames(className)
@@ -241,6 +241,6 @@ export const MdcSelectMenuFC: FunctionalComponent<MdcSelectMenuFCProps> = (
       {...rest}
     >
       {children}
-    </MdcMenuFC>
+    </Menu>
   )
 }

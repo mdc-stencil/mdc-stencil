@@ -1,11 +1,11 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcTopAppBarFCProps
+export interface TopAppBarProps
   extends JSXBase.HTMLAttributes<HTMLElement> {
 }
 
-export const MdcTopAppBarFC: FunctionalComponent<MdcTopAppBarFCProps> = (
+export const TopAppBar: FunctionalComponent<TopAppBarProps> = (
   props,
   children
 ) => {
@@ -24,11 +24,11 @@ export const MdcTopAppBarFC: FunctionalComponent<MdcTopAppBarFCProps> = (
   )
 }
 
-export interface MdcTopAppBarRowFCProps
+export interface TopAppBarRowProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcTopAppBarRowFC: FunctionalComponent<MdcTopAppBarRowFCProps> = (
+export const TopAppBarRow: FunctionalComponent<TopAppBarRowProps> = (
   props,
   children
 ) => {
@@ -47,12 +47,12 @@ export const MdcTopAppBarRowFC: FunctionalComponent<MdcTopAppBarRowFCProps> = (
   )
 }
 
-export interface MdcTopAppBarSectionFCProps
+export interface TopAppBarSectionProps
   extends JSXBase.HTMLAttributes<HTMLElement> {
   align?: 'start' | 'end'
 }
 
-export const MdcTopAppBarSectionFC: FunctionalComponent<MdcTopAppBarSectionFCProps> = (
+export const TopAppBarSection: FunctionalComponent<TopAppBarSectionProps> = (
   props,
   children
 ) => {
@@ -72,11 +72,11 @@ export const MdcTopAppBarSectionFC: FunctionalComponent<MdcTopAppBarSectionFCPro
   )
 }
 
-export interface MdcTopAppBarTitleFCProps
+export interface TopAppBarTitleProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcTopAppBarTitleFC: FunctionalComponent<MdcTopAppBarTitleFCProps> = (
+export const TopAppBarTitle: FunctionalComponent<TopAppBarTitleProps> = (
   props,
   children
 ) => {

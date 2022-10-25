@@ -1,14 +1,14 @@
-import { MdcButtonFC, MdcButtonFCProps } from '@mdc-stencil/button'
+import { Button, ButtonProps } from '@mdc-stencil/button'
 import { classNames } from '@mdc-stencil/common'
-import { MdcIconButtonFC, MdcIconButtonFCProps } from '@mdc-stencil/icon-button'
+import { IconButton, IconButtonProps } from '@mdc-stencil/icon-button'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcCardFCProps
+export interface CardProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   kind?: 'outlined'
 }
 
-export const MdcCardFC: FunctionalComponent<MdcCardFCProps> = (
+export const Card: FunctionalComponent<CardProps> = (
   props,
   children
 ) => {
@@ -30,11 +30,11 @@ export const MdcCardFC: FunctionalComponent<MdcCardFCProps> = (
   )
 }
 
-export interface MdcCardPrimaryActionFCProps
+export interface CardPrimaryActionProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcCardPrimaryActionFC: FunctionalComponent<MdcCardPrimaryActionFCProps> = (
+export const CardPrimaryAction: FunctionalComponent<CardPrimaryActionProps> = (
   props,
   children
 ) => {
@@ -51,11 +51,11 @@ export const MdcCardPrimaryActionFC: FunctionalComponent<MdcCardPrimaryActionFCP
   )
 }
 
-export interface MdcCardRippleFCProps
+export interface CardRippleProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcCardRippleFC: FunctionalComponent<MdcCardRippleFCProps> = (
+export const CardRipple: FunctionalComponent<CardRippleProps> = (
   props,
   children
 ) => {
@@ -72,12 +72,12 @@ export const MdcCardRippleFC: FunctionalComponent<MdcCardRippleFCProps> = (
   )
 }
 
-export interface MdcCardMediaFCProps
+export interface CardMediaProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   kind?: 'square' | '16-9'
 }
 
-export const MdcCardMediaFC: FunctionalComponent<MdcCardMediaFCProps> = (
+export const CardMedia: FunctionalComponent<CardMediaProps> = (
   props,
   children
 ) => {
@@ -99,11 +99,11 @@ export const MdcCardMediaFC: FunctionalComponent<MdcCardMediaFCProps> = (
   )
 }
 
-export interface MdcCardMediaContentFCProps
+export interface CardMediaContentProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcCardMediaContentFC: FunctionalComponent<MdcCardMediaContentFCProps> = (
+export const CardMediaContent: FunctionalComponent<CardMediaContentProps> = (
   props,
   children
 ) => {
@@ -123,12 +123,12 @@ export const MdcCardMediaContentFC: FunctionalComponent<MdcCardMediaContentFCPro
   )
 }
 
-export interface MdcCardActionsFCProps
+export interface CardActionsProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   kind?: 'full-bleed'
 }
 
-export const MdcCardActionsFC: FunctionalComponent<MdcCardActionsFCProps> = (
+export const CardActions: FunctionalComponent<CardActionsProps> = (
   props,
   children
 ) => {
@@ -150,11 +150,11 @@ export const MdcCardActionsFC: FunctionalComponent<MdcCardActionsFCProps> = (
   )
 }
 
-export interface MdcCardActionButtonsFCProps
+export interface CardActionButtonsProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcCardActionButtonsFC: FunctionalComponent<MdcCardActionButtonsFCProps> = (
+export const CardActionButtons: FunctionalComponent<CardActionButtonsProps> = (
   props,
   children
 ) => {
@@ -171,11 +171,11 @@ export const MdcCardActionButtonsFC: FunctionalComponent<MdcCardActionButtonsFCP
   )
 }
 
-export interface MdcCardActionIconsFCProps
+export interface CardActionIconsProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcCardActionIconsFC: FunctionalComponent<MdcCardActionIconsFCProps> = (
+export const CardActionIcons: FunctionalComponent<CardActionIconsProps> = (
   props,
   children
 ) => {
@@ -192,17 +192,17 @@ export const MdcCardActionIconsFC: FunctionalComponent<MdcCardActionIconsFCProps
   )
 }
 
-export interface MdcCardActionButtonFCProps
-  extends MdcButtonFCProps {
+export interface CardActionButtonProps
+  extends ButtonProps {
 }
 
-export const MdcCardActionButtonFC: FunctionalComponent<MdcCardActionButtonFCProps> = (
+export const CardActionButton: FunctionalComponent<CardActionButtonProps> = (
   props,
   children
 ) => {
   const { class: className, ...rest } = props
   return (
-    <MdcButtonFC class={{
+    <Button class={{
       'mdc-card__action': true,
       'mdc-card__action--button': true,
       ...classNames(className)
@@ -210,21 +210,21 @@ export const MdcCardActionButtonFC: FunctionalComponent<MdcCardActionButtonFCPro
       {...rest}
     >
       {children}
-    </MdcButtonFC>
+    </Button>
   )
 }
 
-export interface MdcCardActionIconFCProps
-  extends MdcIconButtonFCProps {
+export interface CardActionIconProps
+  extends IconButtonProps {
 }
 
-export const MdcCardActionIconFC: FunctionalComponent<MdcCardActionIconFCProps> = (
+export const CardActionIcon: FunctionalComponent<CardActionIconProps> = (
   props,
   children
 ) => {
   const { class: className, ...rest } = props
   return (
-    <MdcIconButtonFC class={{
+    <IconButton class={{
       'mdc-card__action': true,
       'mdc-card__action--icon': true,
       ...classNames(className)
@@ -232,15 +232,15 @@ export const MdcCardActionIconFC: FunctionalComponent<MdcCardActionIconFCProps> 
       {...rest}
     >
       {children}
-    </MdcIconButtonFC>
+    </IconButton>
   )
 }
 
-export interface MdcCardContentFCProps
+export interface CardContentProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcCardContentFC: FunctionalComponent<MdcCardContentFCProps> = (
+export const CardContent: FunctionalComponent<CardContentProps> = (
   props,
   children
 ) => {

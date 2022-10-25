@@ -1,13 +1,13 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcLinearProgressFCProps
+export interface LinearProgressProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   indeterminate?: boolean
   closed?: boolean
 }
 
-export const MdcLinearProgressFC: FunctionalComponent<MdcLinearProgressFCProps> = (
+export const LinearProgress: FunctionalComponent<LinearProgressProps> = (
   props,
   children
 ) => {
@@ -23,26 +23,26 @@ export const MdcLinearProgressFC: FunctionalComponent<MdcLinearProgressFCProps> 
       role='progressbar'
       {...rest}
     >
-      <MdcLinearProgressBufferFC>
-        <MdcLinearProgressBufferBarFC />
-        <MdcLinearProgressBufferDotsFC />
-      </MdcLinearProgressBufferFC>
-      <MdcLinearProgressPrimaryBarFC>
-        <MdcLinearProgressBarInnerFC />
-      </MdcLinearProgressPrimaryBarFC>
-      <MdcLinearProgressSecondaryBarFC>
-        <MdcLinearProgressBarInnerFC />
-      </MdcLinearProgressSecondaryBarFC>
+      <LinearProgressBuffer>
+        <LinearProgressBufferBar />
+        <LinearProgressBufferDots />
+      </LinearProgressBuffer>
+      <LinearProgressPrimaryBar>
+        <LinearProgressBarInner />
+      </LinearProgressPrimaryBar>
+      <LinearProgressSecondaryBar>
+        <LinearProgressBarInner />
+      </LinearProgressSecondaryBar>
       {children}
     </div>
   )
 }
 
-export interface MdcLinearProgressBufferFCProps
+export interface LinearProgressBufferProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcLinearProgressBufferFC: FunctionalComponent<MdcLinearProgressBufferFCProps> = (
+export const LinearProgressBuffer: FunctionalComponent<LinearProgressBufferProps> = (
   props,
   children
 ) => {
@@ -60,11 +60,11 @@ export const MdcLinearProgressBufferFC: FunctionalComponent<MdcLinearProgressBuf
   )
 }
 
-export interface MdcLinearProgressBufferBarFCProps
+export interface LinearProgressBufferBarProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcLinearProgressBufferBarFC: FunctionalComponent<MdcLinearProgressBufferBarFCProps> = (
+export const LinearProgressBufferBar: FunctionalComponent<LinearProgressBufferBarProps> = (
   props,
   children
 ) => {
@@ -82,11 +82,11 @@ export const MdcLinearProgressBufferBarFC: FunctionalComponent<MdcLinearProgress
   )
 }
 
-export interface MdcLinearProgressBufferDotsFCProps
+export interface LinearProgressBufferDotsProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcLinearProgressBufferDotsFC: FunctionalComponent<MdcLinearProgressBufferDotsFCProps> = (
+export const LinearProgressBufferDots: FunctionalComponent<LinearProgressBufferDotsProps> = (
   props,
   children
 ) => {
@@ -104,11 +104,11 @@ export const MdcLinearProgressBufferDotsFC: FunctionalComponent<MdcLinearProgres
   )
 }
 
-export interface MdcLinearProgressPrimaryBarFCProps
+export interface LinearProgressPrimaryBarProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcLinearProgressPrimaryBarFC: FunctionalComponent<MdcLinearProgressPrimaryBarFCProps> = (
+export const LinearProgressPrimaryBar: FunctionalComponent<LinearProgressPrimaryBarProps> = (
   props,
   children
 ) => {
@@ -127,11 +127,11 @@ export const MdcLinearProgressPrimaryBarFC: FunctionalComponent<MdcLinearProgres
   )
 }
 
-export interface MdcLinearProgressSecondaryBarFCProps
+export interface LinearProgressSecondaryBarProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcLinearProgressSecondaryBarFC: FunctionalComponent<MdcLinearProgressSecondaryBarFCProps> = (
+export const LinearProgressSecondaryBar: FunctionalComponent<LinearProgressSecondaryBarProps> = (
   props,
   children
 ) => {
@@ -150,11 +150,11 @@ export const MdcLinearProgressSecondaryBarFC: FunctionalComponent<MdcLinearProgr
   )
 }
 
-export interface MdcLinearProgressBarInnerFCProps
+export interface LinearProgressBarInnerProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcLinearProgressBarInnerFC: FunctionalComponent<MdcLinearProgressBarInnerFCProps> = (
+export const LinearProgressBarInner: FunctionalComponent<LinearProgressBarInnerProps> = (
   props,
   children
 ) => {

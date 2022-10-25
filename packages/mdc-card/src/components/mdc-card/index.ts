@@ -1,1 +1,1 @@
-export * from './mdc-card.fc'
+export * from './card'

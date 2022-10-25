@@ -1,11 +1,11 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcIconButtonFCProps
+export interface IconButtonProps
   extends JSXBase.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
-export const MdcIconButtonFC: FunctionalComponent<MdcIconButtonFCProps> = (
+export const IconButton: FunctionalComponent<IconButtonProps> = (
   props,
   children
 ) => {
@@ -20,18 +20,18 @@ export const MdcIconButtonFC: FunctionalComponent<MdcIconButtonFCProps> = (
     }}
       {...rest}
     >
-      <MdcIconButtonRippleFC />
-      <MdcIconButtonFocusRingFC />
+      <IconButtonRipple />
+      <IconButtonFocusRing />
       {children}
     </button>
   )
 }
 
-export interface MdcIconButtonRippleFCProps
+export interface IconButtonRippleProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcIconButtonRippleFC: FunctionalComponent<MdcIconButtonRippleFCProps> = (
+export const IconButtonRipple: FunctionalComponent<IconButtonRippleProps> = (
   props,
   children
 ) => {
@@ -48,11 +48,11 @@ export const MdcIconButtonRippleFC: FunctionalComponent<MdcIconButtonRippleFCPro
   )
 }
 
-export interface MdcIconButtonFocusRingFCProps
+export interface IconButtonFocusRingProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcIconButtonFocusRingFC: FunctionalComponent<MdcIconButtonFocusRingFCProps> = (
+export const IconButtonFocusRing: FunctionalComponent<IconButtonFocusRingProps> = (
   props,
   children
 ) => {
@@ -69,11 +69,11 @@ export const MdcIconButtonFocusRingFC: FunctionalComponent<MdcIconButtonFocusRin
   )
 }
 
-export interface MdcIconButtonTouchFCProps
+export interface IconButtonTouchProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcIconButtonTouchFC: FunctionalComponent<MdcIconButtonTouchFCProps> = (
+export const IconButtonTouch: FunctionalComponent<IconButtonTouchProps> = (
   props,
   children
 ) => {

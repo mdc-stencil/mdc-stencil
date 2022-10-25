@@ -1,2 +1,2 @@
 export * from '@material/drawer'
-export * from './mdc-drawer.fc'
+export * from './drawer'

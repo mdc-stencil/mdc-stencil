@@ -1,11 +1,11 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcRadioFCProps extends MdcRadioNativeControlFCProps {
+export interface RadioProps extends RadioNativeControlProps {
   touch?: boolean
 }
 
-export const MdcRadioFC: FunctionalComponent<MdcRadioFCProps> = (
+export const Radio: FunctionalComponent<RadioProps> = (
   props,
   children
 ) => {
@@ -20,22 +20,22 @@ export const MdcRadioFC: FunctionalComponent<MdcRadioFCProps> = (
         ...classNames(className)
       }}
     >
-      <MdcRadioNativeControlFC {...rest} />
-      <MdcRadioBackgroundFC>
-        <MdcRadioOuterCircleFC />
-        <MdcRadioInnerCircleFC />
-      </MdcRadioBackgroundFC>
-      <MdcRadioRippleFC />
+      <RadioNativeControl {...rest} />
+      <RadioBackground>
+        <RadioOuterCircle />
+        <RadioInnerCircle />
+      </RadioBackground>
+      <RadioRipple />
       {children}
     </div>
   )
 }
 
-export interface MdcRadioNativeControlFCProps
+export interface RadioNativeControlProps
   extends JSXBase.InputHTMLAttributes<HTMLInputElement> {}
 
-export const MdcRadioNativeControlFC: FunctionalComponent<
-MdcRadioNativeControlFCProps
+export const RadioNativeControl: FunctionalComponent<
+RadioNativeControlProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -52,11 +52,11 @@ MdcRadioNativeControlFCProps
   )
 }
 
-export interface MdcRadioBackgroundFCProps
+export interface RadioBackgroundProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcRadioBackgroundFC: FunctionalComponent<
-MdcRadioBackgroundFCProps
+export const RadioBackground: FunctionalComponent<
+RadioBackgroundProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -72,11 +72,11 @@ MdcRadioBackgroundFCProps
   )
 }
 
-export interface MdcRadioOuterCircleFCProps
+export interface RadioOuterCircleProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcRadioOuterCircleFC: FunctionalComponent<
-MdcRadioOuterCircleFCProps
+export const RadioOuterCircle: FunctionalComponent<
+RadioOuterCircleProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -92,11 +92,11 @@ MdcRadioOuterCircleFCProps
   )
 }
 
-export interface MdcRadioInnerCircleFCProps
+export interface RadioInnerCircleProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcRadioInnerCircleFC: FunctionalComponent<
-MdcRadioInnerCircleFCProps
+export const RadioInnerCircle: FunctionalComponent<
+RadioInnerCircleProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
@@ -112,10 +112,10 @@ MdcRadioInnerCircleFCProps
   )
 }
 
-export interface MdcRadioRippleFCProps
+export interface RadioRippleProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcRadioRippleFC: FunctionalComponent<MdcRadioRippleFCProps> = (
+export const RadioRipple: FunctionalComponent<RadioRippleProps> = (
   props,
   children
 ) => {

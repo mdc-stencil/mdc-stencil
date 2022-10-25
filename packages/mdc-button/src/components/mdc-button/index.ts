@@ -1,1 +1,1 @@
-export * from './mdc-button.fc'
+export * from './button'

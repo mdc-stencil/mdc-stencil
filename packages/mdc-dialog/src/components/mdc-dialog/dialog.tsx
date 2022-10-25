@@ -1,13 +1,13 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcDialogFCProps
+export interface DialogProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   open?: boolean
   fullscreen?: boolean
 }
 
-export const MdcDialogFC: FunctionalComponent<MdcDialogFCProps> = (
+export const Dialog: FunctionalComponent<DialogProps> = (
   props,
   children
 ) => {
@@ -21,20 +21,20 @@ export const MdcDialogFC: FunctionalComponent<MdcDialogFCProps> = (
       }}
         {...rest}
       >
-        <MdcDialogContainerFC>
-          <MdcDialogSurfaceFC>
+        <DialogContainer>
+          <DialogSurface>
           {children}
-          </MdcDialogSurfaceFC>
-        </MdcDialogContainerFC>
-        <MdcDialogScrimFC />
+          </DialogSurface>
+        </DialogContainer>
+        <DialogScrim />
       </div>
   )
 }
 
-export interface MdcDialogScrimFCProps
+export interface DialogScrimProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDialogScrimFC: FunctionalComponent<MdcDialogScrimFCProps> = (
+export const DialogScrim: FunctionalComponent<DialogScrimProps> = (
   props,
   children
 ) => {
@@ -51,10 +51,10 @@ export const MdcDialogScrimFC: FunctionalComponent<MdcDialogScrimFCProps> = (
   )
 }
 
-export interface MdcDialogContainerFCProps
+export interface DialogContainerProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDialogContainerFC: FunctionalComponent<MdcDialogContainerFCProps> = (
+export const DialogContainer: FunctionalComponent<DialogContainerProps> = (
   props,
   children
 ) => {
@@ -71,10 +71,10 @@ export const MdcDialogContainerFC: FunctionalComponent<MdcDialogContainerFCProps
   )
 }
 
-export interface MdcDialogSurfaceFCProps
+export interface DialogSurfaceProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDialogSurfaceFC: FunctionalComponent<MdcDialogSurfaceFCProps> = (
+export const DialogSurface: FunctionalComponent<DialogSurfaceProps> = (
   props,
   children
 ) => {
@@ -91,10 +91,10 @@ export const MdcDialogSurfaceFC: FunctionalComponent<MdcDialogSurfaceFCProps> = 
   )
 }
 
-export interface MdcDialogContentFCProps
+export interface DialogContentProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDialogContentFC: FunctionalComponent<MdcDialogContentFCProps> = (
+export const DialogContent: FunctionalComponent<DialogContentProps> = (
   props,
   children
 ) => {
@@ -111,10 +111,10 @@ export const MdcDialogContentFC: FunctionalComponent<MdcDialogContentFCProps> = 
   )
 }
 
-export interface MdcDialogActionsFCProps
+export interface DialogActionsProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {}
 
-export const MdcDialogActionsFC: FunctionalComponent<MdcDialogActionsFCProps> = (
+export const DialogActions: FunctionalComponent<DialogActionsProps> = (
   props,
   children
 ) => {

@@ -1,2 +1,2 @@
 export * from '@material/radio'
-export * from './mdc-radio.fc'
+export * from './radio'

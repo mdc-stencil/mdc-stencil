@@ -1,11 +1,11 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcTouchTargetWrapperFCProps
+export interface TouchTargetWrapperProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcTouchTargetWrapperFC: FunctionalComponent<MdcTouchTargetWrapperFCProps> = (
+export const TouchTargetWrapper: FunctionalComponent<TouchTargetWrapperProps> = (
   props,
   children
 ) => {

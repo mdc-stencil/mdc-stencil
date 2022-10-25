@@ -1,12 +1,12 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcMenuSurfaceFCProps
+export interface MenuSurfaceProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   kind?: 'fixed' | 'fullwidth'
 }
 
-export const MdcMenuSurfaceFC: FunctionalComponent<MdcMenuSurfaceFCProps> = (
+export const MenuSurface: FunctionalComponent<MenuSurfaceProps> = (
   props,
   children
 ) => {
@@ -25,11 +25,11 @@ export const MdcMenuSurfaceFC: FunctionalComponent<MdcMenuSurfaceFCProps> = (
   )
 }
 
-export interface MdcMenuSurfaceAnchorFCProps
+export interface MenuSurfaceAnchorProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcMenuSurfaceAnchorFC: FunctionalComponent<MdcMenuSurfaceAnchorFCProps> = (
+export const MenuSurfaceAnchor: FunctionalComponent<MenuSurfaceAnchorProps> = (
   props,
   children
 ) => {

@@ -1,1 +1,2 @@
-export * from './mdc-dialog.fc'
+export * from '@material/dialog'
+export * from './dialog'

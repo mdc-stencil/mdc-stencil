@@ -1,12 +1,12 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcNotchedOutlineFCProps
+export interface NotchedOutlineProps
   extends JSXBase.ButtonHTMLAttributes<HTMLSpanElement> {
   kind?: 'notched' | 'no-label'
 }
 
-export const MdcNotchedOutlineFC: FunctionalComponent<MdcNotchedOutlineFCProps> = (
+export const NotchedOutline: FunctionalComponent<NotchedOutlineProps> = (
   props,
   children
 ) => {
@@ -23,20 +23,20 @@ export const MdcNotchedOutlineFC: FunctionalComponent<MdcNotchedOutlineFCProps> 
     }}
       {...rest}
     >
-      <MdcNotchedOutlineLeadingFC />
-      <MdcNotchedOutlineNotchFC>
+      <NotchedOutlineLeading />
+      <NotchedOutlineNotch>
         {children}
-      </MdcNotchedOutlineNotchFC>
-      <MdcNotchedOutlineTrailingFC />
+      </NotchedOutlineNotch>
+      <NotchedOutlineTrailing />
     </span>
   )
 }
 
-export interface MdcNotchedOutlineLeadingProps
+export interface NotchedOutlineLeadingProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcNotchedOutlineLeadingFC: FunctionalComponent<MdcNotchedOutlineLeadingProps> = (
+export const NotchedOutlineLeading: FunctionalComponent<NotchedOutlineLeadingProps> = (
   props,
   children
 ) => {
@@ -53,11 +53,11 @@ export const MdcNotchedOutlineLeadingFC: FunctionalComponent<MdcNotchedOutlineLe
   )
 }
 
-export interface MdcNotchedOutlineNotchFCProps
+export interface NotchedOutlineNotchProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcNotchedOutlineNotchFC: FunctionalComponent<MdcNotchedOutlineNotchFCProps> = (
+export const NotchedOutlineNotch: FunctionalComponent<NotchedOutlineNotchProps> = (
   props,
   children
 ) => {
@@ -74,11 +74,11 @@ export const MdcNotchedOutlineNotchFC: FunctionalComponent<MdcNotchedOutlineNotc
   )
 }
 
-export interface MdcNotchedOutlineTrailingFCProps
+export interface NotchedOutlineTrailingProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement> {
 }
 
-export const MdcNotchedOutlineTrailingFC: FunctionalComponent<MdcNotchedOutlineTrailingFCProps> = (
+export const NotchedOutlineTrailing: FunctionalComponent<NotchedOutlineTrailingProps> = (
   props,
   children
 ) => {

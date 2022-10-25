@@ -1,1 +1,1 @@
-export * from './mdc-bottom-app-bar.fc'
+export * from './bottom-app-bar'

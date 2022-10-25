@@ -1,36 +1,36 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcDeprecatedListFCProps {
+interface DeprecatedProps {
   deprecated?: boolean
 }
 
-export interface MdcListFCProps extends MdcDeprecatedListFCProps {
+export interface ListProps extends DeprecatedProps {
   dense?: boolean
   twoLine?: boolean
   kind?: 'textual' | 'avatar' | 'icon' | 'image' | 'thumbnail' | 'video'
 }
 
-export interface MdcListUlFCProps
+export interface ListUlProps
   extends JSXBase.HTMLAttributes<HTMLUListElement>,
-  MdcListFCProps {
+  ListProps {
   tag?: 'ul'
 }
 
-export interface MdcListOlFCProps
+export interface ListOlProps
   extends JSXBase.OlHTMLAttributes<HTMLOListElement>,
-  MdcListFCProps {
+  ListProps {
   tag: 'ol'
 }
 
-export interface MdcListNavFCProps
+export interface ListNavProps
   extends JSXBase.HTMLAttributes<HTMLElement>,
-  MdcListFCProps {
+  ListProps {
   tag: 'nav'
 }
 
-export const MdcListFC: FunctionalComponent<
-MdcListUlFCProps | MdcListOlFCProps | MdcListNavFCProps
+export const List: FunctionalComponent<
+ListUlProps | ListOlProps | ListNavProps
 > = (props, children) => {
   const {
     tag: Tag = 'ul',
@@ -58,26 +58,26 @@ MdcListUlFCProps | MdcListOlFCProps | MdcListNavFCProps
   )
 }
 
-export interface MdcListItemFCProps extends MdcDeprecatedListFCProps {
+export interface ListItemProps extends DeprecatedProps {
   activated?: boolean
   disabled?: boolean
   selected?: boolean
 }
 
-export interface MdcListItemLiFCProps
+export interface ListItemLiProps
   extends JSXBase.LiHTMLAttributes<HTMLLIElement>,
-  MdcListItemFCProps {
+  ListItemProps {
   tag?: 'li'
 }
 
-export interface MdcListItemAnchorFCProps
+export interface ListItemAnchorProps
   extends JSXBase.AnchorHTMLAttributes<HTMLAnchorElement>,
-  MdcListItemFCProps {
+  ListItemProps {
   tag: 'a'
 }
 
-export const MdcListItemFC: FunctionalComponent<
-MdcListItemLiFCProps | MdcListItemAnchorFCProps
+export const ListItem: FunctionalComponent<
+ListItemLiProps | ListItemAnchorProps
 > = (props, children) => {
   const {
     tag: Tag = 'li',
@@ -107,11 +107,11 @@ MdcListItemLiFCProps | MdcListItemAnchorFCProps
   )
 }
 
-export interface MdcListItemRippleFCProps
+export interface ListItemRippleProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement>,
-  MdcDeprecatedListFCProps {}
+  DeprecatedProps {}
 
-export const MdcListItemRippleFC: FunctionalComponent<MdcListItemRippleFCProps> = (
+export const ListItemRipple: FunctionalComponent<ListItemRippleProps> = (
   props,
   children
 ) => {
@@ -130,11 +130,11 @@ export const MdcListItemRippleFC: FunctionalComponent<MdcListItemRippleFCProps> 
   )
 }
 
-export interface MdcListItemTextFCProps
+export interface ListItemTextProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement>,
-  MdcDeprecatedListFCProps {}
+  DeprecatedProps {}
 
-export const MdcListItemTextFC: FunctionalComponent<MdcListItemTextFCProps> = (
+export const ListItemText: FunctionalComponent<ListItemTextProps> = (
   props,
   children
 ) => {
@@ -153,12 +153,12 @@ export const MdcListItemTextFC: FunctionalComponent<MdcListItemTextFCProps> = (
   )
 }
 
-export interface MdcListItemGraphicFCProps
+export interface ListItemGraphicProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement>,
-  MdcDeprecatedListFCProps {}
+  DeprecatedProps {}
 
-export const MdcListItemGraphicFC: FunctionalComponent<
-MdcListItemGraphicFCProps
+export const ListItemGraphic: FunctionalComponent<
+ListItemGraphicProps
 > = (props, children) => {
   const { class: className, deprecated, ...rest } = props
   const prefix = deprecated === true ? 'mdc-deprecated-list' : 'mdc-list'
@@ -175,11 +175,11 @@ MdcListItemGraphicFCProps
   )
 }
 
-export interface MdcListItemMetaFCProps
+export interface ListItemMetaProps
   extends JSXBase.HTMLAttributes<HTMLSpanElement>,
-  MdcDeprecatedListFCProps {}
+  DeprecatedProps {}
 
-export const MdcListItemMetaFC: FunctionalComponent<MdcListItemMetaFCProps> = (
+export const ListItemMeta: FunctionalComponent<ListItemMetaProps> = (
   props,
   children
 ) => {

@@ -1,13 +1,13 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcFormFieldFCProps
+export interface FormFieldProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
   align?: 'end'
   nowrap?: boolean
 }
 
-export const MdcFormFieldFC: FunctionalComponent<MdcFormFieldFCProps> = (
+export const FormField: FunctionalComponent<FormFieldProps> = (
   props,
   children
 ) => {

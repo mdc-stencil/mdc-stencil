@@ -1,2 +1,2 @@
 export * from '@material/menu'
-export * from './mdc-menu.fc'
+export * from './menu'

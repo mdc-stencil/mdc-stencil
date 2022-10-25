@@ -1,12 +1,12 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface MdcDrawerFCProps
+export interface DrawerProps
   extends JSXBase.HTMLAttributes<HTMLElement> {
   kind?: 'modal' | 'dismissible'
 }
 
-export const MdcDrawerFC: FunctionalComponent<MdcDrawerFCProps> = (
+export const Drawer: FunctionalComponent<DrawerProps> = (
   props,
   children
 ) => {
@@ -24,11 +24,11 @@ export const MdcDrawerFC: FunctionalComponent<MdcDrawerFCProps> = (
   )
 }
 
-export interface MdcDrawerScrimFCProps
+export interface DrawerScrimProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcDrawerScrimFC: FunctionalComponent<MdcDrawerScrimFCProps> = (
+export const DrawerScrim: FunctionalComponent<DrawerScrimProps> = (
   props,
   children
 ) => {
@@ -45,11 +45,11 @@ export const MdcDrawerScrimFC: FunctionalComponent<MdcDrawerScrimFCProps> = (
   )
 }
 
-export interface MdcDrawerHeaderFCProps
+export interface DrawerHeaderProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcDrawerHeaderFC: FunctionalComponent<MdcDrawerHeaderFCProps> = (
+export const DrawerHeader: FunctionalComponent<DrawerHeaderProps> = (
   props,
   children
 ) => {
@@ -66,12 +66,12 @@ export const MdcDrawerHeaderFC: FunctionalComponent<MdcDrawerHeaderFCProps> = (
   )
 }
 
-export interface MdcDrawerTitleFCProps
+export interface DrawerTitleProps
   extends JSXBase.HTMLAttributes<HTMLHeadingElement> {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const MdcDrawerTitleFC: FunctionalComponent<MdcDrawerTitleFCProps> = (
+export const DrawerTitle: FunctionalComponent<DrawerTitleProps> = (
   props,
   children
 ) => {
@@ -88,12 +88,12 @@ export const MdcDrawerTitleFC: FunctionalComponent<MdcDrawerTitleFCProps> = (
   )
 }
 
-export interface MdcDrawerSubtitleFCProps
+export interface DrawerSubtitleProps
   extends JSXBase.HTMLAttributes<HTMLHeadingElement> {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
-export const MdcDrawerSubtitleFC: FunctionalComponent<MdcDrawerSubtitleFCProps> = (
+export const DrawerSubtitle: FunctionalComponent<DrawerSubtitleProps> = (
   props,
   children
 ) => {
@@ -110,11 +110,11 @@ export const MdcDrawerSubtitleFC: FunctionalComponent<MdcDrawerSubtitleFCProps> 
   )
 }
 
-export interface MdcDrawerContentFCProps
+export interface DrawerContentProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcDrawerContentFC: FunctionalComponent<MdcDrawerContentFCProps> = (
+export const DrawerContent: FunctionalComponent<DrawerContentProps> = (
   props,
   children
 ) => {
@@ -131,11 +131,11 @@ export const MdcDrawerContentFC: FunctionalComponent<MdcDrawerContentFCProps> = 
   )
 }
 
-export interface MdcDrawerAppContentFCProps
+export interface DrawerAppContentProps
   extends JSXBase.HTMLAttributes<HTMLDivElement> {
 }
 
-export const MdcDrawerAppContentFC: FunctionalComponent<MdcDrawerAppContentFCProps> = (
+export const DrawerAppContent: FunctionalComponent<DrawerAppContentProps> = (
   props,
   children
 ) => {

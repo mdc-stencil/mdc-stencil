@@ -1,2 +1,2 @@
 export * from '@material/floating-label'
-export * from './mdc-floating-label.fc'
+export * from './floating-label'
