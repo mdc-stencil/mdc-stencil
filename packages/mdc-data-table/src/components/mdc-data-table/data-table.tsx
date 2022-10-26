@@ -148,7 +148,7 @@ DataTableHeaderCellWrapperProps
 > = (props, children) => {
   const { class: className, ...rest } = props
   return (
-    <th
+    <div
       class={{
         'mdc-data-table__header-cell-wrapper': true,
         ...classNames(className)
@@ -156,7 +156,7 @@ DataTableHeaderCellWrapperProps
       {...rest}
     >
       {children}
-    </th>
+    </div>
   )
 }
 
