@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@mdc-stencil/bottom-app-bar",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "The Material Components for the web (StencilJS) bottom app bar component",
   "keywords": [
     "material",
@@ -36,7 +36,7 @@
     "prepublishOnly": "./scripts/create-dist-package.mjs"
   },
   "dependencies": {
-    "@mdc-stencil/common": "^1.0.0",
+    "@mdc-stencil/common": "^2.0.0",
     "@stencil/core": "^2.19.0"
   },
   "devDependencies": {
