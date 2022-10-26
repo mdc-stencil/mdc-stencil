@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@mdc-stencil/common",
   "version": "1.0.0",
   "description": "The Material Components for the web (StencilJS) common",
