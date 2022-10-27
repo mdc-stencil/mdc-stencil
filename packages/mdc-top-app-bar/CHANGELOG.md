@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/mdc-stencil/mdc-stencil/compare/@mdc-stencil/top-app-bar@2.0.0...@mdc-stencil/top-app-bar@2.1.0) (2022-10-27)
+
+
+### Features
+
+* add missing props to `top-app-bar` ([d7079ef](https://github.com/mdc-stencil/mdc-stencil/commit/d7079ef873a237a31eb60e77aa217ebd255f3031))
+
+
+
+
+
 # 2.0.0 (2022-10-26)
 
 
