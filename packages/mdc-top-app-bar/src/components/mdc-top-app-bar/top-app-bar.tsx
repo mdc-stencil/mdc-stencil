@@ -1,22 +1,48 @@
 import { classNames } from '@mdc-stencil/common'
 import { FunctionalComponent, h, JSXBase } from '@stencil/core/internal'
 
-export interface TopAppBarProps
-  extends JSXBase.HTMLAttributes<HTMLElement> {
+type TopAppBarWidth =
+  | {
+    short?: false
+    collapsed?: false
+  }
+  | {
+    short: true
+    collapsed?: boolean
+  }
+
+export type TopAppBarProps = JSXBase.HTMLAttributes<HTMLElement> & TopAppBarWidth & {
+  fixed?: boolean
+  prominent?: boolean
+  dense?: boolean
 }
 
 export const TopAppBar: FunctionalComponent<TopAppBarProps> = (
   props,
   children
 ) => {
-  const { class: className, ...rest } = {
+  const {
+    class: className,
+    fixed,
+    prominent,
+    dense,
+    short,
+    collapsed,
+    ...rest
+  } = {
     ...props
   }
   return (
-    <header class={{
-      'mdc-top-app-bar': true,
-      ...classNames(className)
-    }}
+    <header
+      class={{
+        'mdc-top-app-bar': true,
+        'mdc-top-app-bar--fixed': fixed === true,
+        'mdc-top-app-bar--prominent': prominent === true,
+        'mdc-top-app-bar--dense': dense === true,
+        'mdc-top-app-bar--short': short === true,
+        'mdc-top-app-bar--short-collapsed': collapsed === true,
+        ...classNames(className)
+      }}
       {...rest}
     >
       {children}
