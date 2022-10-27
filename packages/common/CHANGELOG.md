@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/mdc-stencil/mdc-stencil/compare/@mdc-stencil/common@2.0.0...@mdc-stencil/common@3.0.0) (2022-10-27)
+
+
+### Features
+
+* removed unused utils ([bbaff6d](https://github.com/mdc-stencil/mdc-stencil/commit/bbaff6d565870988f2cdf920717e8034931fe030))
+
+
+### BREAKING CHANGES
+
+* This removes previously exposed utils
+
+
+
+
+
 # 2.0.0 (2022-10-26)
 
 

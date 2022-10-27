@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@mdc-stencil/layout-grid",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The Material Components for the web (StencilJS) layout grid component",
   "keywords": [
     "material",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@material/layout-grid": "^14.0.0",
-    "@mdc-stencil/common": "^2.0.0",
+    "@mdc-stencil/common": "^3.0.0",
     "@stencil/core": "^2.19.0"
   },
   "devDependencies": {
