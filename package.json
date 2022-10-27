@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "description": "The Material Components for the web (StencilJS)",
   "scripts": {
-    "bootstrap": "npm exec lerna bootstrap",
-    "build": "npm exec lerna run build",
-    "test": "npm exec lerna run test",
-    "lint": "npm exec lerna run lint"
+    "lerna:bootstrap": "npm exec lerna bootstrap",
+    "lerna:build": "npm exec lerna run build",
+    "lerna:test": "npm exec lerna run test",
+    "lerna:lint": "npm exec lerna run lint",
+    "lerna:clean": "npm exec lerna run clean"
   },
   "repository": {
     "type": "git",
